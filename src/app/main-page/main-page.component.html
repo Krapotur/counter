@@ -1,0 +1,13 @@
+<div class="container" *ngIf="!success; else table">
+    <input [(ngModel)] = "textXml"
+      placeholder="Скопируйте и вставьте код из XML файла..."
+    >
+
+<!--  <input type="file" (change)="readFile($event)"  id="input_file">-->
+
+     <button (click)="createTable()">Сформировать таблицу</button>
+     <img src="./assets/images/counter.png" alt="counter.png">
+</div>
+<ng-template #table>
+  <app-table-page [allCounter] = "allCounters" [nameOrganization] = "nameOrganization" [data]="data"></app-table-page>
+</ng-template>

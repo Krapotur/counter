@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="info">
+      <h2>Организация: {{nameOrganization}}</h2>
+      <h2>Дата: {{data}}г</h2>
+  </div>
+
+<hr>
+
+<div class="container">
+  <div class="box">
+      <table class="number_counter">
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>Номер счётчика</th>
+          <th *ngFor="let time of timeArr_part1">{{time}}</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ngFor="let counter of allCounter; ">
+          <td>{{counter.id}}</td>
+          <td>{{counter.name}}</td>
+          <td *ngFor="let value of counter.valuesPart_1">{{value}}</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table class="number_counter">
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>Номер счётчика</th>
+          <th *ngFor="let time of timeArr_part2">{{time}}</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ngFor="let counter of allCounter; ">
+          <td>{{counter.id}}</td>
+          <td>{{counter.name}}</td>
+          <td *ngFor="let value of counter.valuesPart_2">{{value}}</td>
+        </tr>
+        </tbody>
+      </table>
+    <div class="table_bottom">
+      <table class="number_counter">
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>Номер счётчика</th>
+          <th *ngFor="let time of timeArr_part3">{{time}}</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ngFor="let counter of allCounter; ">
+          <td>{{counter.id}}</td>
+          <td class="number_counter">{{counter.name}}</td>
+          <td *ngFor="let value of counter.valuesPart_3">{{value}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <table class="sum_values">
+        <thead>
+        <tr>
+          <th>№</th>
+          <th>Номер счётчика</th>
+          <th>Общая сумма кВт.ч за 24ч</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr  *ngFor="let counter of allCounter; ">
+          <td>{{counter.id}}</td>
+          <td>{{counter.name}}</td>
+          <td>{{counter.sumValues}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<hr class="hr_bottom">
+<div class="footer">
+  <p>© Все права защищены <a href="https://m.vk.com/id312228348">@Dayfive5</a> 2023г</p>
+</div>
+
